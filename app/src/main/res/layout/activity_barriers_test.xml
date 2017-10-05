@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="dev.nelson.template.MainActivity">
+
+    <ImageView
+        android:id="@+id/image_test_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/ic_android_black_24dp"
+        android:tint="@color/colorAccent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <ImageView
+        android:id="@+id/image_test2"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_android_black_24dp"
+        android:tint="@color/colorAccent"
+        app:layout_constraintTop_toBottomOf="@+id/image_test_1"
+
+        />
+
+    <android.support.constraint.Barrier
+        android:id="@+id/barrier"
+        android:layout_width="1dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        app:barrierDirection="right"
+        app:constraint_referenced_ids="image_test_1, image_test2"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="156dp"
+        android:text=" position it relative to. We don’t use a constraint here because a constraint is actually a one-to-one mapping, and here we have multiple Views. For a Barrier we need to define multiple Views as referenced IDs, which we can do by dragging them within the component tree:"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/barrier"
+        />
+
+    <android.support.constraint.Barrier
+        android:id="@+id/barrier2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="left" />
+
+</android.support.constraint.ConstraintLayout>
