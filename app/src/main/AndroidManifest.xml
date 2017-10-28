@@ -18,6 +18,7 @@
         </activity>
         <activity android:name=".bariers.BarriersTestActivity"/>
         <activity android:name=".groups.GroupsTestActivity"/>
+        <activity android:name=".circlelayout.CircleLayoutActivity"/>
     </application>
 
 </manifest>

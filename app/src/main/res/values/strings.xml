@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">Template</string>
+    <string name="app_name">Playground Constrain Layout Sandbox</string>
+    <string name="lorum_short">test</string>
 </resources>
